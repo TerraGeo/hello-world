@@ -7,8 +7,7 @@ import java.util.Random;
  * Created by Billy on 5/24/2016.
  */
 public class FileDemo {
-    public static void createFolder(int a, int b, int c) {
-        String homeDirectory = "D:/Java/Docs/Folder";
+    public static void createFolder(int a, int b, int c, String basicDirectory) {
         String homeSubDirectory = "SubFolder";
         String filename = "Zgymbo";
         boolean bool = false;
@@ -16,13 +15,13 @@ public class FileDemo {
         Random random = new Random();
         for (int y = 0; y < a; y++) {
             try {
-                folder = new File(homeDirectory.concat(String.valueOf(y + 1)));
+                folder = new File(basicDirectory.concat(String.valueOf(y + 1)));
                 bool = folder.mkdir();
                 System.out.println(bool);
             } catch (Exception e2) {
                 e2.printStackTrace();
             }
-            System.out.println(y + " " + homeDirectory);
+            System.out.println(y + " " + basicDirectory);
             for (int i = 0; i < random.nextInt(b); i++) {
                 File subfolder = new File(folder, homeSubDirectory.concat(String.valueOf(i + 1)));
                 subfolder.mkdir();
@@ -45,6 +44,6 @@ public class FileDemo {
     }
 
     public static void main(String[] args) {
-        createFolder(4, 7, 10);
+        createFolder(4, 7, 10, "D:/Java/Docs/Folder");
     }
 }
