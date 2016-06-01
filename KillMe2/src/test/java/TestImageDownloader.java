@@ -16,7 +16,7 @@ public class TestImageDownloader {
         ImageDownloader imD1 = new ImageDownloader();
         file = imD1.downloadImage(ImageDownloader.CURRENT_URL,
                 ImageDownloader.HOME_DIRECTORY);
-        Assert.assertEquals(100, imD1.compareImage(file, ImageDownloader.IM2));
+        Assert.assertTrue(imD1.compareImage(file, ImageDownloader.IM2));
     }
 
     @After
