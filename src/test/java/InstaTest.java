@@ -7,6 +7,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -27,7 +28,7 @@ public class InstaTest {
     @Before
     public void setUp() {
         System.setProperty("webdriver.chrome.driver", "D:/WorkSpace/chromedriver_win32/chromedriver.exe");
-        webDriver = new ChromeDriver();
+        webDriver = new FirefoxDriver();
         webDriver.manage().window().maximize();
         imageSaver = new ImageSaver();
     }
@@ -38,8 +39,9 @@ public class InstaTest {
         JavascriptExecutor jse = (JavascriptExecutor) webDriver;
         jse.executeScript("window.scrollBy(0, 1500)", "");
         webDriver.findElement(By.xpath("//a[@class='_oidfu']")).click();
-        List<WebElement> webElementList1 = webDriver.findElements(By.xpath("//span[@class='_e8fkl']"));
+        List<WebElement> webElementList1 = webDriver.findElements(By.xpath("//span[@class='_bkw5z']"));
         List<String> linkList2 = new ArrayList<String>();
+       // String postAmount = webDriver.findElement(By.xpath("//span[@class='_bkw5z']"));
         for (WebElement web2 : webElementList1) {
             linkList2.add(web2.getText());
         }
@@ -70,7 +72,7 @@ public class InstaTest {
         JavascriptExecutor jse = (JavascriptExecutor) webDriver;
         jse.executeScript("window.scrollBy(0, 1500)", "");
         webDriver.findElement(By.xpath("//a[@class='_oidfu']")).click();
-        List<WebElement> webElementList1 = webDriver.findElements(By.xpath("//span[@class='_e8fkl']"));
+        List<WebElement> webElementList1 = webDriver.findElements(By.xpath("//span[@class='_bkw5z']"));
         List<String> linkList2 = new ArrayList<String>();
         for (WebElement web2 : webElementList1) {
             linkList2.add(web2.getText());
