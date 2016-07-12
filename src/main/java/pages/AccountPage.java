@@ -26,7 +26,7 @@ public class AccountPage extends Page {
     @FindBy(xpath = "//input[@class='global-search__submit']")
     private WebElement searchButton;
 
-    public void customAssertEquals() {
+    public void greetingsMessageAssertEquals() {
         String correctMessage = "Welcome, thesunriseempire@ukr.net";
         assertEquals(customDelay(visibilityOf(greetingsMessage)).getText(), correctMessage);
     }

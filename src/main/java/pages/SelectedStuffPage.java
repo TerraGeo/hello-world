@@ -3,7 +3,6 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import utils.CustomDelay;
 
 import static utils.CustomDelay.customDelay;
 
@@ -15,11 +14,11 @@ public class SelectedStuffPage extends Page {
 
     @FindBy(xpath = "//span[@class='add-to-cart__button-text global-form-button__inner']")
     private WebElement addToCartButton;
-
+    @FindBy(xpath = "//a[@href='/en/shoppingcart.html']")
     private WebElement continueToCartButton;
 
     public CartPage clickOnAddCartButton() {
-        addToCartButton.click();
+        customDelay(addToCartButton).click();
         customDelay(continueToCartButton).click();
         return new CartPage(Page.getDriver());
     }

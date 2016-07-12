@@ -25,7 +25,6 @@ public class OriginTest {
         homePage = new HomePage(new ChromeDriver());
         Page.getDriver().manage().window().maximize();
     }
-
     @After
     public void quitFromThePage() {
         if (Page.getDriver() != null)

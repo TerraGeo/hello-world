@@ -11,7 +11,7 @@ public class EntanceTest extends OriginTest {
         Page.getDriver().get(OriginTest.HOME_PAGE);
         signInPage = homePage.clickOnSignInButton();
         accountPage = signInPage.accountSignIn(USER_E_MAIL, PASSWORD);
-        accountPage.customAssertEquals();
+        accountPage.greetingsMessageAssertEquals();
     }
 
     @Test
@@ -19,10 +19,10 @@ public class EntanceTest extends OriginTest {
         Page.getDriver().get(OriginTest.HOME_PAGE);
         signInPage = homePage.clickOnSignInButton();
         accountPage = signInPage.accountSignIn(USER_E_MAIL, PASSWORD);
-        accountPage.customAssertEquals();
+        accountPage.greetingsMessageAssertEquals();
         searchResultPage = accountPage.moveToSearchResults(stuffName);
         selectedStuffPage = searchResultPage.moveToStuff();
         cartPage = selectedStuffPage.clickOnAddCartButton();
-        cartPage.customAssertEquals2();
+        cartPage.totalAmountAssertEquals();
     }
 }
