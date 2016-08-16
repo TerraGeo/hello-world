@@ -1,0 +1,30 @@
+
+#wrapper{
+	width: 1000px;
+	height: auto;
+	margin: 0 auto;
+	color: #6495ED;
+}
+#calculatorBody{
+	width: 600px;
+	height: 800px;
+	margin: 0 auto;
+	color: #6495ED;
+}
+table{
+	width: 600px;
+	height: 800px;
+	border-collapse: separate;
+	border-spacing: 0px;
+	color: #6495ED;
+}
+td{
+	text-align: center;
+}
+input{
+	width: 100%;
+	height: 100%;
+	font-size: 40px;
+	background-color: gray;
+}
+
