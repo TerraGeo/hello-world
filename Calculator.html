@@ -3,43 +3,45 @@
 	<head>
 		<meta charset='utf-8'>
 		<title>Calculator</title>
-		<link rel='stylesheet' href='css/calculatorStyles.css'>
+		<link rel='stylesheet' href='css/calculatorStyles.css' />
+		
 	</head>
 	<body>
+	<script src='script/scriptHeart.js'></script>	
 		<div id='wrapper'>
 			<div id='calculatorBody'>
 				<table border='0' id='table'>
 					<tr>
-						<td colspan='4'><input type='digits' placeholder='Please, start'></td>
+						<td colspan='4'><input type='digits' placeholder='Please, start' id='reverseString' dir='rtl' readonly ></td>
 					</tr>
 					<tr>
-						<td><input type='button' value='AC'></td>
-						<td><input type='button' value='+/-'></td>
-						<td><input type='button' value='%'></td>
-						<td><input type='button' value='/'></td>
+						<th><input id = 'cleaner' type='button' onclick='clearAll()' value='AC'></th>
+						<th><input id='signChange' onclick='signSwitcher()' type='button' value='+/-'></th>
+						<th><input id='percentSign' onclick='percentageCounter()' type='button' value='%'></th>
+						<th><input onclick='insertSign(this)' type='button' value='/'></th>
 					</tr>
 					<tr>
-						<td><input type='button' value='1'></td>
-						<td><input type='button' value='2'></td>
-						<td><input type='button' value='3'></td>
-						<td><input type='button' value='X'></td>
+						<td><input class='digit' type='button' onclick='insertNumber(this)' value='1'></td>
+						<td><input class='digit' type='button' onclick='insertNumber(this)' value='2'></td>
+						<td><input class='digit' type='button' onclick='insertNumber(this)' value='3'></td>
+						<td><input onclick='insertSign(this)' type='button' value='*'></td>
 					</tr>
 					<tr>
-						<td><input type='button' value='4'></td>
-						<td><input type='button' value='5'></td>
-						<td><input type='button' value='6'></td>
-						<td><input type='button' value='-'></td>
+						<td><input class='digit' type='button' onclick='insertNumber(this)' value='4'></td>
+						<td><input class='digit' type='button' onclick='insertNumber(this)' value='5'></td>
+						<td><input class='digit' type='button' onclick='insertNumber(this)' value='6'></td>
+						<td><input onclick='insertSign(this)' type='button' value='-'></td>
 					</tr>
 					<tr>
-						<td><input type='button' value='7'></td>
-						<td><input type='button' value='8'></td>
-						<td><input type='button' value='9'></td>
-						<td><input type='button' value='+'></td>
+						<td><input class='digit' type='button' onclick='insertNumber(this)' value='7'></td>
+						<td><input class='digit' type='button' onclick='insertNumber(this)' value='8'></td>
+						<td><input class='digit' type='button' onclick='insertNumber(this)' value='9'></td>
+						<td><input onclick='insertSign(this)' type='button' value='+'></td>
 					</tr>
 					<tr>
-						<td colspan='2'><input type='button' value='0'></td>
-						<td><input type='button' value='.'></td>
-						<td><input type='button' value='='></td>
+						<td colspan='2'><input class='digit' type='button' onclick='insertNumber(this)' value='0'></td>
+						<td><input onclick='insertNumber(this)' type='button' value='.'></td>
+						<td><input onclick='execute()' type='button' value='='></td>
 					</tr>
 				</table>
 			</div>
