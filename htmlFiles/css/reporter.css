@@ -1,0 +1,21 @@
+#top{
+	background-color: #20B2AA;
+	text-align: center;
+	font-size: 50px;
+}
+#wrapper{
+	background-color: #ADD8E6;
+	width: 1000px;
+	height: 700px;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 30px;
+}
+#footer{
+	background-color: #E0FFFF;
+	font-size: 16px;
+	text-align: center;
+}
+body{
+	background-color: #90EE90;
+}
